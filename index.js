@@ -1,13 +1,15 @@
+require("dotenv").config();
 const { AnchorEarn, CHAINS, NETWORKS, DENOMS } = require("@anchor-protocol/anchor-earn");
 const fs = require("fs");
 
 const anchorEarn = new AnchorEarn({
   chain: CHAINS.TERRA,
   network: NETWORKS.COLUMBUS_5,
-  address: "",
+  address: process.env.ADDRESS,
 });
 
 // timer 24 hours
+main();
 setInterval(main, 1000 * 60 * 60 * 24);
 
 async function main() {
@@ -28,7 +30,9 @@ async function main() {
     market: market.markets[0].APY,
     time: new Date(),
   };
-
+  
+  console.log(data)
+  
   // add data to json
   json.push(data);
 

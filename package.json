@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "@anchor-protocol/anchor-earn": "^2.0.0"
+    "@anchor-protocol/anchor-earn": "^2.0.0",
+    "dotenv": "^16.0.0"
   }
 }
