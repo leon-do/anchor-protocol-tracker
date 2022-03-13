@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@anchor-protocol/anchor-earn": "^2.0.0"
+  }
+}
